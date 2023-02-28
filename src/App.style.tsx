@@ -6,7 +6,6 @@ export default StyleSheet.create({
     backgroundColor: '#102027',
   },
   title_view: {
-    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 10,
