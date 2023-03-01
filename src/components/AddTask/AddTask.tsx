@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TextInput, Button} from 'react-native';
 import React from 'react';
 import style from './AddTask.style';
 
@@ -7,10 +7,15 @@ type inputProps = {
   input: string;
 };
 
-const AddTask: FC<inputProps> = ({input}) => {
+const AddTask: FC<inputProps> = ({}) => {
   return (
     <View style={style.container}>
-      <Text>{input}</Text>
+      <View>
+        <TextInput style={style.textInput} />
+      </View>
+      <View>
+        <Button title="Kaydet" color={'#808080'} />
+      </View>
     </View>
   );
 };

@@ -4,6 +4,14 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#102027',
+    justifyContent: 'flex-start',
+  },
+  header: {
+    flex: 1,
+  },
+  body: {
+    flex: 2,
+    alignContent: 'center',
   },
   title_view: {
     flexDirection: 'row',
