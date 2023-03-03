@@ -23,4 +23,29 @@ export default StyleSheet.create({
     fontSize: 40,
     fontWeight: '600',
   },
+  input_container: {
+    margin: 10,
+    flex: 0,
+    padding: 20,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    backgroundColor: '#37474f',
+    borderRadius: 10,
+  },
+  textInput: {
+    borderBottomWidth: 2,
+    borderBottomColor: '#728995',
+    position: 'relative',
+    paddingBottom: 5,
+    color: '#808080',
+  },
+  text: {
+    color: 'white',
+  },
+  button: {
+    padding: 5,
+    borderRadius: 50,
+    overflow: 'hidden',
+    color: '#808080',
+  },
 });
