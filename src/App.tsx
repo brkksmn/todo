@@ -13,7 +13,6 @@ const App = () => {
   const handleDeleteTask = () => {
     const newTasks = [...tasks];
     const index = Number(Object.keys(tasks));
-    console.log(typeof Number(index));
     newTasks.splice(index, 1);
     setTasks(newTasks);
   };
@@ -22,7 +21,7 @@ const App = () => {
       <View style={style.header}>
         <View style={style.title_view}>
           <Text style={style.title}>YAPILACAKLAR</Text>
-          <Text style={style.title}>0</Text>
+          <Text style={style.title}>{Object.keys(tasks).length}</Text>
         </View>
 
         <View style={style.body}>
