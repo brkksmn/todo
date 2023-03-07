@@ -1,4 +1,4 @@
-import {Text, TextInput, View, Button} from 'react-native';
+import {Text, TextInput, View, Button, FlatList, Pressable} from 'react-native';
 import React, {useState} from 'react';
 import Card from './components/Card';
 import style from './App.style';
@@ -10,6 +10,13 @@ const App = () => {
     setTasks([...tasks, text]);
     setText('');
   };
+  const handleDeleteTask = () => {
+    const newTasks = [...tasks];
+    const index = Number(Object.keys(tasks));
+    console.log(typeof Number(index));
+    newTasks.splice(index, 1);
+    setTasks(newTasks);
+  };
   return (
     <View style={style.container}>
       <View style={style.header}>
@@ -17,9 +24,17 @@ const App = () => {
           <Text style={style.title}>YAPILACAKLAR</Text>
           <Text style={style.title}>0</Text>
         </View>
+
         <View style={style.body}>
-          <Card textProp={text} />
+          <Pressable onPress={() => handleDeleteTask()}>
+            <FlatList
+              data={tasks}
+              keyExtractor={item => item + Date.now() + Math.random()}
+              renderItem={({item}) => <Card textProp={item} />}
+            />
+          </Pressable>
         </View>
+
         <View style={style.input_container}>
           <View style={style.textInput}>
             <TextInput
